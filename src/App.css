@@ -1,0 +1,44 @@
+/* src/App.css */
+.console-container {
+  background-color: #000000;
+  color: #ffffff; /* Default color */
+  padding: 10px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 16px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.console-output {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.command-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  margin-right: 5px;
+}
+
+.console-input {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 16px;
+  outline: none;
+  caret-color: white;
+  flex-grow: 1;
+}
+
+.console-container:focus-within {
+  outline: none;
+  cursor: text;
+}
