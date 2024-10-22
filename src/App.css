@@ -1,4 +1,8 @@
-/* src/App.css */
+::-webkit-scrollbar {
+  display: none;
+}
+
+
 .console-container {
   background-color: #000000;
   color: #ffffff; /* Default color */
@@ -16,6 +20,8 @@
 .console-output {
   flex-grow: 1;
   overflow-y: auto;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }
 
 .command-line {
