@@ -34,10 +34,15 @@ function App() {
             break;
           case 'color':
             const colorCode = args[0];
-            if (colorCode && colorCode !== 'black') {
+            if (colorCode && colorCode !== 'black' && colorCode !== '#000000') {
               dispatch(setColor(colorCode));
               output = `Text color changed to ${colorCode}`;
-            } else {
+            } else if(colorCode === undefined){
+              dispatch(setColor('#ffffff'));
+              output = `Text color changed to default`;
+            } 
+            else {
+              console.log(colorCode)
               output = 'Usage: color <color-code>';
             }
             break;
